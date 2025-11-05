@@ -1,0 +1,4 @@
+.product-list div button {
+    display: flex;
+    justify-content: space-between;
+}

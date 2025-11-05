@@ -1,0 +1,59 @@
+
+
+-- We are creating an ecomm frontend
+
+we are using API -- https://dummyjson.com/docs/products -- Documentation for API
+
+-- Get All Products - https://dummyjson.com/products
+
+-- Views for site
+
+    -- Home Page  -- Required for MVP
+        -- All Products shown on Dashboard -- maybe filtered by rating
+        -- possibly a way to filter how we want (by categories, by tags, etc..)
+
+    -- Contact/ About page  -- Required for MVP
+        -- Something like Customer Support
+
+    -- Rewards page  -- Nice to have
+        -- Customer rewards page, shows the rewards the customer can get with their points
+
+    -- Shopping cart / checkout  -- Required for MVP
+        -- Possibly show a dropdown of shopping cart from any page
+        -- Or just a page showing shopping cart / checkout
+
+    -- Show Promotional items  -- Nice to have
+        -- either a promotional items page, or have a section on the Home page displaying promotions at the current time
+
+    -- Item details page  -- Required for MVP
+        -- Displays all of the details of the items
+        -- possibly show related items on this page as well
+
+
+for our ECOMM website
+
+example of a user story
+
+As a user
+I want to be able to add an item to my cart
+Then checkout
+
+
+A user goes to our ecomm website
+they can see all of the products on our home page
+They can click on a product from the home page
+and get navigated to the product details page
+the user can add to cart from product details page
+User can go to shopping cart page and checkout from there
+
+(Optional) From product details page, the user can see reviews and ratings of product
+
+
+-- Styling plan 
+ - Material UI (MUI)
+ - Bootstrap for react
+ - plain CSS
+
+-- Get a color pallet to use for the site 
+
+-- Color Palette link : https://coolors.co/palette/1f4f80-804f1f-0a2845-426f99-45280a-996f42
