@@ -6,17 +6,21 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import CardActionArea from '@mui/material/CardActionArea';
 import Button from '@mui/material/Button';
+import { useCart } from '../contexts/CartContext';
 
 
 const ProductCard = ({ product }) => {
   const navigate = useNavigate();
 
+  const { addToCart } = useCart();
+
   return (
-    <Card sx={{ maxWidth: 345 , backgroundColor: '#426F99'}}>
+    <Card sx={{ maxWidth: 345 , backgroundColor: '#426F99', padding: '20px'}}>
 
         <CardMedia
           component="img"
-          height="140"
+          // height="140"
+          // width='50'
           image={product.images[0]}
           alt="green iguana"
         />
@@ -27,9 +31,12 @@ const ProductCard = ({ product }) => {
           <Typography variant="body2" sx={{ color: 'text.secondary' }}>
             {product.description}
           </Typography>
+          <Typography variant="body3" sx={{ color: 'text.secondary' }}>
+            <strong>${product.price}</strong>
+          </Typography>
         </CardContent>
         <Button onClick={() => {navigate(`/product/${product.id}`)}} variant="contained" color='success' style={{marginRight: '5px'}}>Product Details</Button>
-        <Button variant="contained" color='error'>Add to Cart</Button>
+        <Button onClick={() => addToCart(product)} variant="contained" color='error'>Add to Cart</Button>
     </Card>
   );
 }

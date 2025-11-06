@@ -1,0 +1,13 @@
+.site-footer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    border-top: 1px solid #426F99;
+    background: #0A2845;
+    min-height: 100px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    color: #ddd;
+}
