@@ -6,7 +6,7 @@ import ProductList from '../../components/ProductList/ProductList';
 const HomePageView = () => {
 
   const [products, setProducts] = useState([]);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -15,9 +15,10 @@ const HomePageView = () => {
 
         const data = await response.json();
 
-        console.log(data.products)
+        console.log(data.products);
 
         setProducts(data.products);
+        setLoading(false);
 
       } catch (err) {
         console.log(err);
@@ -26,6 +27,10 @@ const HomePageView = () => {
 
     fetchProducts();
   }, []); // empty dependency array which will only fire off when mounted
+
+  if (loading) {
+    return <div>Loading Products...</div>
+  }
 
   return (
     <div>

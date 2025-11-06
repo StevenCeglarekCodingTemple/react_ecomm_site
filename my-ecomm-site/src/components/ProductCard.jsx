@@ -1,14 +1,19 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import CardActionArea from '@mui/material/CardActionArea';
+import Button from '@mui/material/Button';
+
 
 const ProductCard = ({ product }) => {
+  const navigate = useNavigate();
+
   return (
     <Card sx={{ maxWidth: 345 , backgroundColor: '#426F99'}}>
-      <CardActionArea>
+
         <CardMedia
           component="img"
           height="140"
@@ -23,7 +28,8 @@ const ProductCard = ({ product }) => {
             {product.description}
           </Typography>
         </CardContent>
-      </CardActionArea>
+        <Button onClick={() => {navigate(`/product/${product.id}`)}} variant="contained" color='success' style={{marginRight: '5px'}}>Product Details</Button>
+        <Button variant="contained" color='error'>Add to Cart</Button>
     </Card>
   );
 }

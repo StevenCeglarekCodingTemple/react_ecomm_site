@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import HomePageView from './views/HomePage/HomePageView';
 import NavBar from './components/NavBar/NavBar';
 import Footer from './components/Footer/Footer';
+import SingleProductView from "./views/SingleProductPage/SingleProductView";
 
 function App() {
 
@@ -12,6 +13,7 @@ function App() {
         <NavBar />
         <Routes>
           <Route path='/' element={<HomePageView />} />
+          <Route path='/product/:id' element={<SingleProductView />} />
         </Routes>
         <Footer />
       </BrowserRouter>
