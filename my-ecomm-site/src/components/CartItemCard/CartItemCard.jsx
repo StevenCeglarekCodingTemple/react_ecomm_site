@@ -24,7 +24,7 @@ const CartItemCard = ({ item }) => {
         </td>
         <td>
           <div className='item-price'>
-            <p>${item.quantity > 1 ? item.price * item.quantity : item.price}</p>
+            <p>${item.quantity > 1 ? (item.price * item.quantity).toFixed(2) : item.price.toFixed(2)}</p>
           </div>
         </td>
         <td>

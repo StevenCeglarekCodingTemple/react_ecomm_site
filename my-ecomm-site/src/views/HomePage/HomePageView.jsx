@@ -15,8 +15,6 @@ const HomePageView = () => {
 
         const data = await response.json();
 
-        console.log(data.products);
-
         setProducts(data.products);
         setLoading(false);
 

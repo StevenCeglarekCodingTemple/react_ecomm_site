@@ -1,29 +1,25 @@
 import React from 'react'
-import { useCart } from '../../contexts/CartContext'
-import CartItemCard from '../CartItemCard/CartItemCard';
-import './CartList.css';
+import { useCart } from '../../contexts/CartContext';
+import CheckoutCard from '../CheckoutCard/CheckoutCard';
 
-const CartList = () => {
+const CheckoutList = () => {
     const { cartItems, total } = useCart();
 
   return (
     <div className='container-fluid'>
       
-      {cartItems.length > 0 ? 
         <table className='table table-hover'>
         <thead>
           <tr>
             <th></th>
             <th>Name</th>
-            <th>Brand</th>
             <th>Qty</th>
             <th>Price</th>
-            <th></th>
           </tr>
         </thead>
         <tbody>
             {cartItems.map((item, idx) => (
-              <CartItemCard key={idx} item={item} />
+              <CheckoutCard key={idx} item={item} />
             ))}
         </tbody>
         <tfoot>
@@ -31,19 +27,12 @@ const CartList = () => {
           <th></th>
             <th></th>
             <th></th>
-            <th></th>
             <th>${total.toFixed(2)}</th>
-            <th></th>
           </tr>
         </tfoot>
       </table>
-      :
-        <div className='d-flex justify-content-center'>
-          <h2>There are no items currently in the cart.</h2>
-        </div>      
-      }
     </div>
   )
 }
 
-export default CartList;
+export default CheckoutList

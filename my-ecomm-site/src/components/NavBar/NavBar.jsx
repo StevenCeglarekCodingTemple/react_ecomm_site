@@ -18,7 +18,7 @@ const NavBar = () => {
                     <NavLink to='/contact_us' className='nav-links'>Contact Us</NavLink>
                 </li>
                 <li>
-                    <NavLink to='/search' className='nav-links'>Search</NavLink>
+                    <NavLink to='/products/search' className='nav-links'>Search</NavLink>
                 </li>
                 <li>
                     <NavLink to='/cart' className='nav-links'>{cartItems.length > 0 ? `Cart(${cartItems.length})` : 'Cart'}</NavLink>
