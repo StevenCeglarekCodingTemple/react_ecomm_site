@@ -38,7 +38,6 @@ export const CartProvider = ({ children }) => {
 
 
     const addToCart = (product) => {
-
         // see if item already exists in the list
         // checks the ids of the items in the cart with the new product trying to be added
         const existingItem = cartItems.find((item) => item.id === product.id);
@@ -64,10 +63,15 @@ export const CartProvider = ({ children }) => {
 
     }
 
+    const removeItem = (id) => {
+        setCartItems((prevItems) => prevItems.filter((item) => item.id !== id))
+    }
+
     const value = {
         cartItems,
         addToCart, 
-        total
+        total,
+        removeItem
     }
 
     return (
